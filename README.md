@@ -21,8 +21,9 @@ made by [elia hanumatori](https://t.me/hanumatori)
 
 ### changelog-discipline
 
-[changelog-discipline](./changelog-discipline/SKILL.md) — ведёт changelog как
-журнал решений: что поменялось, почему, как было раньше и что отвергли.
+[changelog-discipline](./changelog-discipline/SKILL.md) — фиксирует каждое
+законченное изменение кода: механические правки коротко, решения — с причиной,
+прежним состоянием и отвергнутыми вариантами.
 
 ### system-feedback
 
