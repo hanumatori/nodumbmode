@@ -19,6 +19,13 @@ made by [elia hanumatori](https://t.me/hanumatori)
 отладки. на выходе — коротко: что известно, где риск, что делать дальше и как
 проверить результат.
 
+### edge-hunt
+
+[edge-hunt](./edge-hunt/SKILL.md) — находит корнеры, которые трудно заметить
+линейным чтением задачи: пересекает состояния, данные, порядок действий, сбои и
+параллельные изменения, затем превращает находки в ожидаемое поведение и
+проверяемые сценарии.
+
 ### changelog-discipline
 
 [changelog-discipline](./changelog-discipline/SKILL.md) — фиксирует каждое
@@ -80,7 +87,7 @@ npx skills@latest add hanumatori/nodumbmode -g -y -a claude-code -a codex --skil
 ## обновление
 
 ```bash
-npx skills@latest update nodumb ask-nodumb changelog-discipline system-feedback
+npx skills@latest update nodumb edge-hunt ask-nodumb changelog-discipline system-feedback
 ```
 
 тянет свежую версию из репы. переустанавливать не нужно — cli помнит источник.
@@ -99,7 +106,7 @@ npx skills@latest update
 конкретным агентом. связать вручную — подставив свой каталог вместо `~/.codex`:
 
 ```bash
-for s in nodumb ask-nodumb changelog-discipline system-feedback; do
+for s in nodumb edge-hunt ask-nodumb changelog-discipline system-feedback; do
   ln -sfn ~/.agents/skills/$s ~/.codex/skills/$s
 done
 ```

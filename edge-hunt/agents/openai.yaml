@@ -1,0 +1,4 @@
+interface:
+  display_name: "Edge Hunt"
+  short_description: "Находит неочевидные корнеры задачи"
+  default_prompt: "Use $edge-hunt to find the non-obvious edge cases in this task before implementation."
