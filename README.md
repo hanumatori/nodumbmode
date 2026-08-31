@@ -9,6 +9,17 @@ made by [elia hanumatori](https://t.me/hanumatori)
 
 ## что внутри
 
+### nodumb-loop
+
+[nodumb-loop](./nodumb-loop/SKILL.md) — адаптивно маршрутизирует длинную задачу
+между скиллами. выбирает только проверку, способную изменить следующий шаг,
+сначала получает доступный факт и возвращается не к началу процесса, а к
+затронутому уровню.
+
+использовать, когда задача пересекает несколько уровней решения, меняет режим по
+ходу работы или продолжает движение после неудачной проверки. для локальной
+понятной правки loop не нужен.
+
 ### nodumb
 
 [nodumb](./nodumb/SKILL.md) — манифест здравого смысла для агента и набор правил
@@ -34,8 +45,10 @@ made by [elia hanumatori](https://t.me/hanumatori)
 
 ### system-feedback
 
-[system-feedback](./system-feedback/SKILL.md) — проверяет, понятно ли
-пользователю, что произошло после действия и что делать при ошибке.
+[system-feedback](./system-feedback/SKILL.md) — проверяет, совпадает ли реальное
+состояние системы с тем, что человек понимает из интерфейса. проектирует
+обратную связь только для разумной неопределённости, а не добавляет тост или
+спиннер к каждому действию.
 
 ### ask-nodumb
 
@@ -87,7 +100,7 @@ npx skills@latest add hanumatori/nodumbmode -g -y -a claude-code -a codex --skil
 ## обновление
 
 ```bash
-npx skills@latest update nodumb edge-hunt ask-nodumb changelog-discipline system-feedback
+npx skills@latest update nodumb-loop nodumb edge-hunt ask-nodumb changelog-discipline system-feedback
 ```
 
 тянет свежую версию из репы. переустанавливать не нужно — cli помнит источник.
@@ -106,7 +119,7 @@ npx skills@latest update
 конкретным агентом. связать вручную — подставив свой каталог вместо `~/.codex`:
 
 ```bash
-for s in nodumb edge-hunt ask-nodumb changelog-discipline system-feedback; do
+for s in nodumb-loop nodumb edge-hunt ask-nodumb changelog-discipline system-feedback; do
   ln -sfn ~/.agents/skills/$s ~/.codex/skills/$s
 done
 ```
