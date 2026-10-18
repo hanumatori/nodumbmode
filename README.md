@@ -45,6 +45,18 @@ made by [elia hanumatori](https://t.me/hanumatori)
 ux-задач. помогает увидеть скрытое предположение, разделить образ продукта,
 модель и технологию
 
+### nodumb-design
+
+[nodumb-design](./nodumb-design/SKILL.md) — первый слой дизайна,
+проектирование. ведёт экран, блок, модалку или шаг потока от цели к форме: что
+человек должен сделать и откуда пришёл → какой контент для этого нужен →
+широкие рефы по типу поверхности → серая композиция из кусков рефов и блоков с
+пятисекундной проверкой → только потом стиль и бренд.
+
+использовать, когда нужно спроектировать веб-страницу, мобильный экран или
+визуальный концепт, и особенно когда тянет сразу рисовать красиво. основа, на
+которую дальше будут добавляться правила про дизайн.
+
 ### nodumb-loop
 
 [nodumb-loop](./nodumb-loop/SKILL.md) — адаптивно маршрутизирует длинную задачу
@@ -100,7 +112,7 @@ npx skills@latest add hanumatori/nodumbmode -g -y -a claude-code -a codex --skil
 ## обновление
 
 ```bash
-npx skills@latest update nodumb-loop nodumb edge-hunt ask-nodumb changelog-discipline system-feedback
+npx skills@latest update nodumb-loop nodumb nodumb-design edge-hunt ask-nodumb changelog-discipline system-feedback
 ```
 
 тянет свежую версию из репы. переустанавливать не нужно — cli помнит источник.
@@ -119,7 +131,7 @@ npx skills@latest update
 конкретным агентом. связать вручную — подставив свой каталог вместо `~/.codex`:
 
 ```bash
-for s in nodumb-loop nodumb edge-hunt ask-nodumb changelog-discipline system-feedback; do
+for s in nodumb-loop nodumb nodumb-design edge-hunt ask-nodumb changelog-discipline system-feedback; do
   ln -sfn ~/.agents/skills/$s ~/.codex/skills/$s
 done
 ```
